@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Universidad Tecnológica AR</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene embedded arjs>
+      
+      <!-- Marcador AR -->
+      <a-marker preset="hiro">
+
+        <!-- Texto 3D en color vino -->
+        <a-entity 
+          text="value: Universidad Tecnológica; align: center; color: #800000; width: 6"
+          position="0 0.5 0"
+          rotation="-90 0 0">
+        </a-entity>
+
+        <!-- Modelo 3D del águila -->
+        <a-entity 
+          gltf-model="https://cdn.glitch.global/21174b84-c1cb-4e4f-87e9-ff88f83ac54c/eagle.glb?v=1716308929457"
+          scale="0.5 0.5 0.5"
+          position="0 -0.25 0"
+          rotation="0 180 0">
+        </a-entity>
+
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
+
